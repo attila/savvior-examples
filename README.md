@@ -1,15 +1,24 @@
-# Savvior.js Examples
+# Savvior.js examples
 
-These are example implementations of [Savvior](https://github.com/attila/savvior),
-a JavaScript solution for multicolumn layouts, an alternative to Salvattore or
+These examples show usage of [Savvior](https://github.com/attila/savvior), a
+JavaScript solution for multicolumn layouts, an alternative to Salvattore or
 Masonry, without CSS driven configuration or absolute CSS positioning.
 
 ## Examples provided
 
-* __example.html__ - a traditional script tag based solution
-* __example-requirejs.html__ - usage in as an AMD module
-* __example-modernizr.html__ - usage via Modernizr (please note that it requires
-  media query detection in Modernizr, see lib/modernizr.js in this repository)
+| Filename                   | Description                                     |
+| -------------------------- | ----------------------------------------------- |
+| __example.html__           | a traditional script tag based solution         |
+| __example_requirejs.html__ | usage in as an AMD module                       |
+| __example_modernizr.html__ | usage via Modernizr (Please note that Modenrizr example requires media query detection in Modernizr, see lib/modernizr.js in this repository.) |
+
+## How to see it in action
+
+Just serve up the www/ folder using any web server you'd like. To get you set
+up quickly, we include a node.js static file server. Start the server by typing
+`node server.js` from the command line, and then go to
+[localhost:8888/html/example.html](http://localhost:8888/html/example.html) in
+your browser.
 
 ## More information
 

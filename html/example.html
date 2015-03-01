@@ -2,8 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Savvior example using Require.js</title>
+  <title>Savvior example</title>
   <style>
+    body {
+      font-family: sans-serif;
+    }
     #grid {
       width: 90%;
       margin: auto;
@@ -51,13 +54,10 @@
     .size-1of3 { width: 33.33333%; }
     .size-1of4 { width: 25%; }
   </style>
-
-<!--[if lte IE 9]>
-  <script src="./js/lib/media.match.min.js"></script>
-<![endif]-->
-  <script async data-main="js/app" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
 </head>
 <body>
+
+  <h1>Savvior example using standard script tags</h1>
 
   <div id="grid">
     <div class="box box1"></div>
@@ -73,6 +73,30 @@
     <div class="box box5"></div>
     <div class="box box6"></div>
   </div>
+
+  <h2>More examples</h2>
+  <ul>
+    <li><a href="example.html">example.html</a></li>
+    <li><a href="example-requirejs.html">example-requirejs.html</a></li>
+    <li><a href="example-modernizr.html">example-modernizr.html</a></li>
+  </ul>
+
+<!--[if lte IE 9]>
+  <script src="./js/lib/media.match.min.js"></script>
+<![endif]-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.2/enquire.min.js"></script>
+  <script src="./js/lib/savvior.min.js"></script>
+  <script>
+    (function() {
+      'use strict';
+      savvior.init('#grid', {
+        'screen and (max-width: 600px)': { columns: 1 },
+        'screen and (min-width: 600px) and (max-width: 800px)': { columns: 2 },
+        'screen and (min-width: 800px) and (max-width: 1000px)': { columns: 3 },
+        'screen and (min-width: 1000px)': { columns: 4 },
+      });
+    }());
+  </script>
 
 </body>
 </html>

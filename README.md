@@ -14,7 +14,7 @@ Masonry, without CSS driven configuration or absolute CSS positioning.
 
 ## How to see it in action
 
-Just serve up the www/ folder using any web server you'd like. To get you set
+Just serve up the `html/` folder using any web server you'd like. To get you set
 up quickly, we include a node.js static file server. Start the server by typing
 `node server.js` from the command line, and then go to
 [localhost:8888/html/example.html](http://localhost:8888/html/example.html) in

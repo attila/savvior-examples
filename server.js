@@ -11,6 +11,7 @@ var fs = require('fs');
 var port = process.argv[2] || 8888;
 var types = {
   'html': 'text/html',
+  'css': 'text/css',
   'js': 'application/javascript'
 };
 var site = 'http://localhost:' + port;
@@ -42,4 +43,4 @@ http.createServer(function (request, response) {
   });
 }).listen(parseInt(port, 10));
 
-console.log('Static file server running at => ' + site + '\u000A\u000APress Ctrl + C to shutdown');
+console.log('\u000AStatic file server running at => ' + site + '\u000A\u000APress Ctrl + C to shutdown');
